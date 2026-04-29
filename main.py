@@ -62,11 +62,12 @@ def main():
                 log_event("player_hit")
                 print("Game over!")
                 sys.exit()
-            for s in shots: #s-each shot
+            # each shot and each asteroid gets destroyed   
+            for s in shots: #s-each shot 
                 if s.collides_with(a):
                     log_event("asteroid_shot")
-                    s.kill()
-                    a.kill()
+                    s.kill() 
+                    a.split()
         
        
         
